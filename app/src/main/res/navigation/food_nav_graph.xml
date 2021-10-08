@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_foodBasketFragment_to_foodsFragment"
             app:destination="@id/foodsFragment" />
+        <action
+            android:id="@+id/action_foodBasketFragment_self"
+            app:destination="@id/foodBasketFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodDetailsFragment"

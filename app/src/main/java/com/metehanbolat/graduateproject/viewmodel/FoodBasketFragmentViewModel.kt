@@ -28,12 +28,17 @@ class FoodBasketFragmentViewModel : ViewModel() {
         fdaor.getAllFoodsInBasket(userName)
     }
 
-    fun delete(food_id : Int){
+    fun delete(v : View, food_id : Int){
         fdaor.deleteFood(food_id)
+        moveSelf(v)
     }
 
     fun moveFoodsFragment(v : View){
         Navigation.findNavController(v).navigate(R.id.action_foodBasketFragment_to_foodsFragment)
+    }
+
+    private fun moveSelf(v : View){
+        Navigation.findNavController(v).navigate(R.id.action_foodBasketFragment_self)
     }
 
 }

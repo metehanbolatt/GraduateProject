@@ -3,6 +3,7 @@ package com.metehanbolat.graduateproject.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.metehanbolat.graduateproject.R
@@ -30,9 +31,9 @@ class RecyclerBasketFoodAdapter(var context : Context, private var foodBasketLis
         val url = "http://kasimadalan.pe.hu/yemekler/resimler/${foodBasket.food_image}"
         Picasso.get().load(url).into(fb.recyclerBasketFoodImage)
 
-        fb.recyclerOrderDeleteImage.setOnClickListener {
-            Snackbar.make(it, context.resources.getString(R.string.out_of_basket, foodBasket.food_name), Snackbar.LENGTH_INDEFINITE).setAction(context.resources.getString(R.string.remove)){
-                viewModel.delete(foodBasket.food_id)
+        fb.recyclerOrderDeleteImage.setOnClickListener { clickView ->
+            Snackbar.make(clickView, context.resources.getString(R.string.out_of_basket, foodBasket.food_name), Snackbar.LENGTH_INDEFINITE).setAction(context.resources.getString(R.string.remove)){
+                viewModel.delete(clickView, foodBasket.food_id)
             }.show()
         }
 

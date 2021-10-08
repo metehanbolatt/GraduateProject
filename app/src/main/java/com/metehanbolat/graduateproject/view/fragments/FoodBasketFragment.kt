@@ -44,7 +44,7 @@ class FoodBasketFragment : Fragment() {
                 viewModel.moveFoodsFragment(binding.root)
             } }
         requireActivity().onBackPressedDispatcher.addCallback(callback)
-        intList.add(99)
+
         viewModel.foodBasketList.observe(viewLifecycleOwner,{ foodBasketList ->
             for (x in foodBasketList.indices) {
                 var control = 0

@@ -149,7 +149,7 @@
             android:layout_height="90dp"
             android:elevation="3dp"
             android:onClick="@{() -> foodsFragment.button(foodsFragmentCartButton)}"
-            android:src="@drawable/elipse_cart"
+            android:src="@drawable/ellipse_cart"
             app:layout_constraintBottom_toTopOf="@id/bottom_nav"
             app:layout_constraintEnd_toEndOf="@id/bottom_nav"
             app:layout_constraintStart_toStartOf="@id/bottom_nav"
