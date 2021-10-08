@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/userSignInFragment">
+
+    <fragment
+        android:id="@+id/userSignInFragment"
+        android:name="com.metehanbolat.graduateproject.view.fragments.UserSignInFragment"
+        android:label="UserSignInFragment" >
+        <action
+            android:id="@+id/action_userSignInFragment_to_userSignUpFragment"
+            app:destination="@id/userSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSignUpFragment"
+        android:name="com.metehanbolat.graduateproject.view.fragments.UserSignUpFragment"
+        android:label="UserSignUpFragment" >
+        <action
+            android:id="@+id/action_userSignUpFragment_to_userSignInFragment"
+            app:destination="@id/userSignInFragment" />
+    </fragment>
+</navigation>

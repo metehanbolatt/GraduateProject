@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/food_nav_graph"
+    app:startDestination="@id/foodsFragment">
+
+    <fragment
+        android:id="@+id/foodsFragment"
+        android:name="com.metehanbolat.graduateproject.view.fragments.FoodsFragment"
+        android:label="FoodsFragment" >
+        <action
+            android:id="@+id/action_foodsFragment_to_foodBasketFragment"
+            app:destination="@id/foodBasketFragment" />
+        <action
+            android:id="@+id/action_foodsFragment_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodBasketFragment"
+        android:name="com.metehanbolat.graduateproject.view.fragments.FoodBasketFragment"
+        android:label="FoodBasketFragment" >
+        <action
+            android:id="@+id/action_foodBasketFragment_to_foodsFragment"
+            app:destination="@id/foodsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailsFragment"
+        android:name="com.metehanbolat.graduateproject.view.fragments.FoodDetailsFragment"
+        android:label="FoodDetailsFragment" >
+        <action
+            android:id="@+id/action_foodDetailsFragment_to_foodsFragment"
+            app:destination="@id/foodsFragment" />
+        <argument
+            android:name="foodName"
+            app:argType="string" />
+        <argument
+            android:name="foodPrice"
+            app:argType="integer" />
+        <argument
+            android:name="foodUrl"
+            app:argType="string" />
+        <argument
+            android:name="foodId"
+            app:argType="integer" />
+        <argument
+            android:name="foodImage"
+            app:argType="string" />
+    </fragment>
+</navigation>

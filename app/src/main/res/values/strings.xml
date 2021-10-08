@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">GraduateProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="brand_name">Food Shop</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="please_dont_empty_field">Please do not leave any blank field.</string>
+
+    <string name="snack_bar_email">The email address is badly formatted.</string>
+    <string name="snack_bar_password">The given password is invalid. Password should be at least 6 characters.</string>
+    <string name="error_occurred">An error has occurred.</string>
+    <string name="wrong_password">Wrong password!</string>
+    <string name="no_user">User record not found.</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Log In</string>
+    <string name="name_surname">Name Surname</string>
+    <string name="password">Password</string>
+    <string name="email">Enter email</string>
+
+    <string name="out_of_basket">Remove %1$s from basket?</string>
+    <string name="remove">Remove</string>
+
+    <string name="add_of_basket">%1$s %2$s have been added to the basket.</string>
+    <string name="add">Add</string>
+
+    <string name="money_nation">$</string>
+
+    <string name="foodMoney">$%1$s</string>
+    <string name="price">Price</string>
+    <string name="add_to_cart">Add to Cart</string>
+
+    <string name="city">Izmir</string>
+    <string name="nation">Turkey</string>
+
+    <string name="or">Or</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password_again">Confirm password</string>
+
+    <string name="search_restaurant">Search restaurant</string>
+    <string name="choose_the">Choose the</string>
+    <string name="food_you_want">Food you want</string>
+
+
+    <string name="ayranInfo">The unique harmony of ice-cold water coming from the mountains and delicious village yoghurt.</string>
+    <string name="baklavaInfo">Pistachio or the unique hazelnuts of the Black Sea? Either way, it goes great after dinner.</string>
+    <string name="fantaInfo">Want to drink orange juice but are looking for something more delicious?</string>
+    <string name="izgara_somonInfo">A feast of taste marinated with olive oil and garlic obtained from the best quality olives of the Aegean. Who doesn\'t love this kind of fish?</string>
+    <string name="izgara_tavukInfo">A feast of taste marinated with olive oil and garlic obtained from the best quality olives of the Aegean. Who doesn\'t love this kind of chicken?</string>
+    <string name="kadayifInfo">A different flavor in each strand with its enormous sherbet prepared by dozens of masters.</string>
+    <string name="kahveInfo">The unique coffee beans from Brazil may be the beginning of a long conversation.</string>
+    <string name="kofteInfo">A flavor that flares up on the grill. Are you ready for more than a meatball with special spices and delicious presentations?</string>
+    <string name="lazanyaInfo">For the most delicious version of lasagna, it was cooked in ovens preheated to 180° for 15 minutes and combined with a sauce you have never tasted before.</string>
+    <string name="makarnaInfo">Are you ready to try the indispensable of Italian cuisine from Italian chefs?</string>
+    <string name="pizzaInfo">We cook our pizzas in our stone ovens for a unique taste by combining handmade doughs made by Italian chefs with the ingredients you want.</string>
+    <string name="suInfo">Natural spring water from the mountains.</string>
+    <string name="sutlacInfo">A unique dessert experience prepared with milk from the villages daily.</string>
+    <string name="tiramisuInfo">Can you imagine how delicious cheese can make a dessert?</string>
+
+
+    <string name="one">1</string>
+
+    <string name="ayran">Ayran</string>
+    <string name="baklava">Baklava</string>
+    <string name="fanta">Fanta</string>
+    <string name="izgara_somon">Izgara Somon</string>
+    <string name="izgara_tavuk">Izgara Tavuk</string>
+    <string name="kadayif">Kadayıf</string>
+    <string name="kahve">Kahve</string>
+    <string name="kofte">Köfte</string>
+    <string name="lazanya">Lazanya</string>
+    <string name="makarna">Makarna</string>
+    <string name="pizza">Pizza</string>
+    <string name="su">Su</string>
+    <string name="sutlac">Sütlaç</string>
+    <string name="tiramisu">Tiramisu</string>
+
+    <string name="firebase_badly_email_format">The email address is badly formatted.</string>
+    <string name="firebase_invalid_password">The given password is invalid. [ Password should be at least 6 characters ]</string>
+    <string name="firebase_sign_in_password">The password is invalid or the user does not have a password.</string>
+    <string name="firebase_sign_in_no_user">There is no user record corresponding to this identifier. The user may have been deleted.</string>
+
+</resources>

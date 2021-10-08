@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/basket.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background_two.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_add.xml" value="0.3828125" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_basket.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_delete.xml" value="0.3828125" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_logo.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/linearcolor.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/splash_image.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/text_view_background.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/activity_user.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_basket_recycler_layout.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_recycler_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_basket.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_details.xml" value="0.25" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_foods.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_user_sign_in.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_user_sign_up.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3171171171171171" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

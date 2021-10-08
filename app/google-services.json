@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "667116922962",
+    "project_id": "graduateproject-64e7f",
+    "storage_bucket": "graduateproject-64e7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667116922962:android:9213fa002028ad995fd78b",
+        "android_client_info": {
+          "package_name": "com.metehanbolat.graduateproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667116922962-0oqss88n0b7bcndmcqutu2qavdgl5ofm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ8RtHnUluwfwHJj_f4qiKNPcXkDxE0K0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667116922962-0oqss88n0b7bcndmcqutu2qavdgl5ofm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
