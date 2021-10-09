@@ -14,6 +14,28 @@
         android:layout_height="match_parent"
         tools:context=".view.fragments.UserSignInFragment">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/waitLottie"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_rawRes="@raw/wait_lottie"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signInAllConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
         <ImageView
             android:id="@+id/buttonBackground"
             android:layout_width="250dp"
@@ -33,7 +55,7 @@
             android:text="@string/sign_in"
             android:fontFamily="@font/gotham_book"
             android:textStyle="bold"
-            android:textColor="#FF0036"
+            android:textColor="@color/signInRed"
             android:onClick="@{() -> userSignUpFragment.moveSignIn(signInText)}"
             android:textSize="14sp"
             android:layout_marginStart="40dp"
@@ -54,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="@id/buttonBackground"
             app:layout_constraintTop_toTopOf="@id/buttonBackground"
             app:layout_constraintBottom_toBottomOf="@id/buttonBackground"
-            android:backgroundTint="#FF0036" />
+            android:backgroundTint="@color/signInRed" />
 
         <EditText
             android:id="@+id/userSignInEmail"
@@ -66,11 +88,11 @@
             android:textSize="16sp"
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="10dp"
-            android:drawableTint="#A8A7A7"
+            android:drawableTint="@color/signInDrawableColor"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
-            android:textColorHint="#A8A7A7"
+            android:textColorHint="@color/signInDrawableColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/buttonBackground" />
@@ -86,9 +108,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="5dp"
             android:hint="@string/password"
-            android:textColorHint="#A8A7A7"
-            android:drawableTint="#A8A7A7"
-            android:drawableEnd="@drawable/ic_eye"
+            android:textColorHint="@color/signInDrawableColor"
+            android:drawableTint="@color/signInDrawableColor"
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,9 +127,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="5dp"
             android:hint="@string/password_again"
-            android:textColorHint="#A8A7A7"
-            android:drawableTint="#A8A7A7"
-            android:drawableEnd="@drawable/ic_eye"
+            android:textColorHint="@color/signInDrawableColor"
+            android:drawableTint="@color/signInDrawableColor"
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -119,12 +139,12 @@
             android:id="@+id/logInButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FF0036"
+            android:backgroundTint="@color/signInRed"
             android:paddingStart="100dp"
             android:paddingEnd="100dp"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:onClick="@{() -> userSignUpFragment.buttonSignUp(logInButton, userSignInEmail.getText().toString(), userSignInPassword.getText().toString())}"
+            android:onClick="@{() -> userSignUpFragment.buttonSignUp(logInButton, userSignInEmail.getText().toString(), userSignInPassword.getText().toString(), userSignInPasswordAgain.getText().toString())}"
             android:text="@string/sign_up"
             android:textSize="16sp"
             android:fontFamily="@font/gotham_bold"
@@ -142,7 +162,7 @@
             android:text="@string/or"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#A8A7A7"
+            android:textColor="@color/signInDrawableColor"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="@id/logInButton"
             app:layout_constraintEnd_toEndOf="@id/logInButton"
@@ -234,6 +254,8 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

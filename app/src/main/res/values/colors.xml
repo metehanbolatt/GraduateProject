@@ -7,7 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="statusColor">#F7F6FF</color>
     <color name="background">#F7F6FF</color>
+    <color name="deleteColor">#D50000</color>
+    <color name="priceColor">#DD2C00</color>
+    <color name="applyButtonColor">#40C4FF</color>
+    <color name="totalPriceColor">#1E88E5</color>
+    <color name="paymentButtonColor">#FF6E40</color>
+    <color name="priceTextColor">#8E9AB3</color>
+    <color name="searchHintColor">#BEBEBE</color>
+    <color name="signInRed">#FF0036</color>
+    <color name="signInDrawableColor">#A8A7A7</color>
 </resources>

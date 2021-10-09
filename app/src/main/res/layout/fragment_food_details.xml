@@ -25,7 +25,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F1F3F6"
         tools:context=".view.fragments.FoodDetailsFragment">
 
         <ImageView
@@ -89,7 +88,7 @@
             android:id="@+id/foodImageBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/food_background"
+            android:src="@drawable/food_background_two"
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="@id/foodLinear"
             app:layout_constraintTop_toBottomOf="@id/foodLinear"
@@ -99,6 +98,7 @@
             android:id="@+id/foodImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_margin="30dp"
             app:layout_constraintStart_toStartOf="@id/foodImageBackground"
             app:layout_constraintTop_toTopOf="@id/foodImageBackground"
             app:layout_constraintEnd_toEndOf="@id/foodImageBackground"
@@ -191,7 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price"
-                android:textColor="#8E9AB3"
+                android:textColor="@color/priceTextColor"
                 android:textSize="18sp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/gotham_bold" />

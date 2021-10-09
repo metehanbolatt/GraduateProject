@@ -1,8 +1,6 @@
 <resources>
-    <string name="app_name">GraduateProject</string>
+    <string name="app_name">Yemek Dükkanı</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="brand_name">Yemek Dükkanı</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="please_dont_empty_field">Lütfen boş alan bırakmayınız.</string>
 
@@ -40,6 +38,18 @@
     <string name="search_restaurant">Restoran ara</string>
     <string name="choose_the">En sevdiğin</string>
     <string name="food_you_want">Yemeği seçebilirsin</string>
+    <string name="total_order">Sipariş Adeti:</string>
+
+    <string name="subtotal">Ara Toplam:</string>
+    <string name="tax">Vergi:</string>
+    <string name="total">Toplam:</string>
+    <string name="payment">Ödeme</string>
+    <string name="promo_code">Promosyon Kodu</string>
+    <string name="apply">Uygula</string>
+    <string name="my">Benim</string>
+    <string name="orders">Siparişlerim</string>
+
+    <string name="do_not_match_password">Parolalar uyuşmuyor.</string>
 
     <string name="ayranInfo">Dağlardan gelen buz gibi su ve enfes köy yoğurdunun eşsiz uyumu.</string>
     <string name="baklavaInfo">Antep fıstığı mı, yoksa Karadeniz\'in eşsiz fındıkları mı? Hangisi olursa olsun yemekten sonra harika gider.</string>

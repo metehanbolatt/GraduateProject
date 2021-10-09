@@ -24,63 +24,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/basketFoodAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text='@{foodBasketObject.food_order + ""}'
-                    android:textStyle="bold"
-                    android:textSize="40sp"
-                    android:textColor="@color/purple_700"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
-
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/recyclerBasketFoodImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@color/black"
                     android:layout_marginStart="10dp"
-                    app:layout_constraintStart_toEndOf="@id/basketFoodAmount"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
 
-                <TextView
-                    android:id="@+id/recyclerBasketFoodName"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{foodBasketObject.food_name}"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:orientation="vertical"
                     android:layout_marginStart="20dp"
-                    app:layout_constraintStart_toEndOf="@id/recyclerBasketFoodImage"
                     app:layout_constraintTop_toTopOf="@id/recyclerBasketFoodImage"
-                    app:layout_constraintBottom_toBottomOf="@id/recyclerBasketFoodImage" />
+                    app:layout_constraintStart_toEndOf="@id/recyclerBasketFoodImage"
+                    app:layout_constraintBottom_toBottomOf="@id/recyclerBasketFoodImage">
+
+                    <TextView
+                        android:id="@+id/recyclerBasketFoodName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{foodBasketObject.food_name}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/basketFoodAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text='@{@string/total_order + " " + foodBasketObject.food_order}'
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/purple_700" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/basketFoodPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{foodBasketObject.food_price + " " + @string/money_nation}'
+                    android:text='@{@string/money_nation + foodBasketObject.food_price}'
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="#D50000"
-                    android:layout_marginEnd="10dp"
-                    app:layout_constraintEnd_toStartOf="@id/recyclerOrderDeleteImage"
-                    app:layout_constraintTop_toTopOf="@id/recyclerOrderDeleteImage"
-                    app:layout_constraintBottom_toBottomOf="@id/recyclerOrderDeleteImage" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/recyclerOrderDeleteImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/priceColor"
+                    android:layout_marginEnd="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_delete" />
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

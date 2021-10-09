@@ -9,7 +9,7 @@
 
         <variable
             name="recyclerFoodAdapter"
-            type="com.metehanbolat.graduateproject.adapter.RecyclerFoodAdapter" />
+            type="com.metehanbolat.graduateproject.recycler.adapter.RecyclerFoodAdapter" />
     </data>
 
     <LinearLayout
@@ -56,8 +56,8 @@
                     android:id="@+id/recyclerFoodPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{foodObject.food_price + @string/money_nation}'
-                    android:textColor="@color/black"
+                    android:text='@{@string/money_nation + foodObject.food_price}'
+                    android:textColor="@color/priceColor"
                     android:fontFamily="@font/gotham_bold"
                     android:textSize="16sp"
                     android:layout_marginTop="4dp"

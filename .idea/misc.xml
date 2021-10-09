@@ -3,14 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/basket.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background.xml" value="0.3828125" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background_two.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_add.xml" value="0.3828125" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_all.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_basket.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_decrease.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_delete.xml" value="0.3828125" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_email.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_eye.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_home.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_location.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_location_orange.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_lock.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_logo.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_person.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_search.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.19144144144144143" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_white_basket.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/linearcolor.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/price_table_background.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/splash_image.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/text_view_background.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -19,10 +34,12 @@
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_recycler_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_basket.xml" value="0.33" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_details.xml" value="0.25" />
-        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_foods.xml" value="0.15" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_foods.xml" value="0.25" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_user_sign_in.xml" value="0.33" />
-        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_user_sign_up.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_user_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3171171171171171" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3310810810810811" />
       </map>
     </option>
   </component>

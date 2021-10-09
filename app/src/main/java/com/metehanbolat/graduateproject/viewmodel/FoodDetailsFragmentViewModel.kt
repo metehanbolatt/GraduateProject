@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
 import com.airbnb.lottie.LottieAnimationView
@@ -85,6 +87,14 @@ class FoodDetailsFragmentViewModel : ViewModel() {
     fun lottieAnimation(animation : LottieAnimationView){
         animation.speed = 1.5f
         animation.playAnimation()
+    }
+
+    fun backPressed(activity : FragmentActivity, view : View){
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                moveFoodsFragment(view)
+            } }
+        activity.onBackPressedDispatcher.addCallback(callback)
     }
 
 }

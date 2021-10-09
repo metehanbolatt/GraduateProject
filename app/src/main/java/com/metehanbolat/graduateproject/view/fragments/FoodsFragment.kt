@@ -1,8 +1,6 @@
 package com.metehanbolat.graduateproject.view.fragments
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,12 +12,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.metehanbolat.graduateproject.R
-import com.metehanbolat.graduateproject.adapter.RecyclerFoodAdapter
+import com.metehanbolat.graduateproject.recycler.adapter.RecyclerFoodAdapter
 import com.metehanbolat.graduateproject.databinding.FragmentFoodsBinding
-import com.metehanbolat.graduateproject.models.allfoodmodel.FoodModel
 import com.metehanbolat.graduateproject.viewmodel.FoodsFragmentViewModel
 import java.util.*
-import kotlin.collections.ArrayList
 
 class FoodsFragment : Fragment() {
 
@@ -41,9 +37,7 @@ class FoodsFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_foods, container, false)
         binding.foodsFragment = this
 
-        val callback = object : OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {} }
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+        viewModel.backPressed(requireActivity())
 
         viewModel.foodList.observe(viewLifecycleOwner, { foodList ->
             adapter = RecyclerFoodAdapter(requireContext(), foodList, viewModel, auth)

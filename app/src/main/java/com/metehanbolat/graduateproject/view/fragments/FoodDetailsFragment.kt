@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +25,7 @@ class FoodDetailsFragment : Fragment() {
     private lateinit var foodName : String
     private lateinit var foodUrl : String
     private lateinit var foodImage : String
+
     private var foodId = 0
     private var foodPrice = 0
 
@@ -53,11 +53,7 @@ class FoodDetailsFragment : Fragment() {
         binding.argFoodName = foodName
         binding.argFoodPrice = foodPrice
 
-        val callback = object : OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-                viewModel.moveFoodsFragment(binding.root)
-            } }
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+        viewModel.backPressed(requireActivity(), binding.root)
 
         viewModel.imageAnimateFirst(requireContext(), binding.foodImage)
 

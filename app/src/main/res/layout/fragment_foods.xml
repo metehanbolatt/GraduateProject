@@ -9,7 +9,7 @@
             type="com.metehanbolat.graduateproject.view.fragments.FoodsFragment" />
         <variable
             name="foodAdapter"
-            type="com.metehanbolat.graduateproject.adapter.RecyclerFoodAdapter" />
+            type="com.metehanbolat.graduateproject.recycler.adapter.RecyclerFoodAdapter" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -121,7 +121,7 @@
             android:maxLines="1"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textColorHint="#BEBEBE"
+            android:textColorHint="@color/searchHintColor"
             android:textSize="14sp"
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +137,7 @@
             android:overScrollMode="never"
             app:elevation="1dp"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+            app:layout_constraintBottom_toTopOf="@id/bottomNav"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/searchEditText"
@@ -150,24 +150,23 @@
             android:elevation="3dp"
             android:onClick="@{() -> foodsFragment.button(foodsFragmentCartButton)}"
             android:src="@drawable/ellipse_cart"
-            app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-            app:layout_constraintEnd_toEndOf="@id/bottom_nav"
-            app:layout_constraintStart_toStartOf="@id/bottom_nav"
-            app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+            app:layout_constraintBottom_toTopOf="@id/bottomNav"
+            app:layout_constraintEnd_toEndOf="@id/bottomNav"
+            app:layout_constraintStart_toStartOf="@id/bottomNav"
+            app:layout_constraintTop_toTopOf="@id/bottomNav" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
+            android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:backgroundTint="#FF0036"
+            app:backgroundTint="@color/paymentButtonColor"
             app:elevation="2dp"
             app:itemIconSize="32dp"
-            app:itemIconTint="#FFFFFF"
+            app:itemIconTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_nav_menu" />
-
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>

@@ -1,8 +1,6 @@
 <resources>
-    <string name="app_name">GraduateProject</string>
+    <string name="app_name">Yemek Dükkanı</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="brand_name">Food Shop</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="please_dont_empty_field">Please do not leave any blank field.</string>
 
@@ -40,7 +38,18 @@
     <string name="search_restaurant">Search restaurant</string>
     <string name="choose_the">Choose the</string>
     <string name="food_you_want">Food you want</string>
+    <string name="total_order">Total Order:</string>
 
+    <string name="subtotal">Subtotal:</string>
+    <string name="tax">Tax:</string>
+    <string name="total">Total:</string>
+    <string name="payment">Payment</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="apply">Apply</string>
+    <string name="my">My</string>
+    <string name="orders">Orders</string>
+    
+    <string name="do_not_match_password">Passwords don\'t match.</string>
 
     <string name="ayranInfo">The unique harmony of ice-cold water coming from the mountains and delicious village yoghurt.</string>
     <string name="baklavaInfo">Pistachio or the unique hazelnuts of the Black Sea? Either way, it goes great after dinner.</string>

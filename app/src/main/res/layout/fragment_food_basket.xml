@@ -10,13 +10,91 @@
             type="com.metehanbolat.graduateproject.view.fragments.FoodBasketFragment" />
         <variable
             name="basketFoodAdapter"
-            type="com.metehanbolat.graduateproject.adapter.RecyclerBasketFoodAdapter" />
+            type="com.metehanbolat.graduateproject.recycler.adapter.RecyclerBasketFoodAdapter" />
+        <variable
+            name="subtotal"
+            type="Integer" />
+        <variable
+            name="tax"
+            type="Float" />
+        <variable
+            name="total"
+            type="Float" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.fragments.FoodBasketFragment">
+
+        <LinearLayout
+            android:id="@+id/locationLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logo">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_location_orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center"
+                android:text="@string/city"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center"
+                android:text="@string/nation"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myOrderLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/foodDetailsBackButton"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-10dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/my" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="24sp"
+                android:text="@string/orders" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/foodDetailsBackButton"
@@ -26,28 +104,179 @@
             android:onClick="@{() -> foodBasketFragment.moveFoodsFragment(foodDetailsBackButton)}"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/logo"
+            app:layout_constraintBottom_toBottomOf="@id/logo"/>
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/logo"
-            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/foodBasketRecyclerView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
+            android:overScrollMode="never"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="14dp"
             android:adapter="@{basketFoodAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/promoText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/myOrderLinear"
+            app:layout_constraintTop_toBottomOf="@id/myOrderLinear" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/emptyRecycler"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/empty_cart"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintStart_toStartOf="@id/foodBasketRecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/foodBasketRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/foodBasketRecyclerView"
+            app:layout_constraintBottom_toBottomOf="@id/foodBasketRecyclerView" />
+
+        <EditText
+            android:id="@+id/promoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/price_table_background"
+            android:hint="@string/promo_code"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:padding="15dp"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toStartOf="@id/foodBasketRecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/foodBasketRecyclerView"
+            app:layout_constraintBottom_toTopOf="@id/priceTableLinear" />
+
+        <Button
+            android:id="@+id/promoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:textSize="12sp"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/applyButtonColor"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/gotham_bold"
+            app:layout_constraintTop_toTopOf="@id/promoText"
+            app:layout_constraintBottom_toBottomOf="@id/promoText"
+            app:layout_constraintEnd_toEndOf="@id/promoText" />
+
+        <LinearLayout
+            android:id="@+id/priceTableLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/foodBasketRecyclerView"
+            app:layout_constraintBottom_toTopOf="@id/paymentButton">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="@string/subtotal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/tax" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/totalPriceColor"
+                    android:text="@string/total" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text='@{@string/money_nation + subtotal}' />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/black"
+                    android:text='@{@string/money_nation + tax}' />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/totalPriceColor"
+                    android:text='@{@string/money_nation + total}' />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/paymentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/paymentButtonColor"
+            android:fontFamily="@font/gotham_bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/payment"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -3,6 +3,7 @@ package com.metehanbolat.graduateproject.viewmodel
 import android.content.Context
 import android.content.Intent
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -45,6 +46,12 @@ class FoodsFragmentViewModel : ViewModel() {
     fun moveFoodDetails(view : View, foodName : String, foodPrice : Int, url : String, foodId : Int, foodImage : String){
         val action = FoodsFragmentDirections.actionFoodsFragmentToFoodDetailsFragment(foodName, foodPrice, url, foodId, foodImage)
         Navigation.findNavController(view).navigate(action)
+    }
+
+    fun backPressed(activity: FragmentActivity){
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {} }
+        activity.onBackPressedDispatcher.addCallback(callback)
     }
 
 }

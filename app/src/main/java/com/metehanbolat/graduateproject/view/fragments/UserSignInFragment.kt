@@ -1,10 +1,12 @@
 package com.metehanbolat.graduateproject.view.fragments
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.metehanbolat.graduateproject.R
@@ -30,6 +32,16 @@ class UserSignInFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_user_sign_in, container, false)
         binding.userSignInFragment = this
 
+        viewModel.wait.observe(viewLifecycleOwner,{
+            if (it == true){
+                binding.waitLottie.visibility = View.VISIBLE
+                binding.signInAllConstraint.visibility = View.INVISIBLE
+            }else{
+                binding.waitLottie.visibility = View.INVISIBLE
+                binding.signInAllConstraint.visibility = View.VISIBLE
+            }
+        })
+
         return binding.root
     }
 
@@ -40,5 +52,4 @@ class UserSignInFragment : Fragment() {
     fun moveSignUp(v : View){
         viewModel.moveSignUp(v)
     }
-
 }

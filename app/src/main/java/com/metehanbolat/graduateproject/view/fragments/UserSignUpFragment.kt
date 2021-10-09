@@ -1,6 +1,7 @@
 package com.metehanbolat.graduateproject.view.fragments
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,11 +31,22 @@ class UserSignUpFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_user_sign_up, container, false)
         binding.userSignUpFragment = this
 
+
+        viewModel.wait.observe(viewLifecycleOwner,{
+            if (it == true){
+                binding.waitLottie.visibility = View.VISIBLE
+                binding.signInAllConstraint.visibility = View.INVISIBLE
+            }else{
+                binding.waitLottie.visibility = View.INVISIBLE
+                binding.signInAllConstraint.visibility = View.VISIBLE
+            }
+        })
+
         return binding.root
     }
 
-    fun buttonSignUp(v : View, userEmail : String, userPassword : String){
-        viewModel.createUser(requireActivity(), requireContext(), v, userEmail, userPassword)
+    fun buttonSignUp(v : View, userEmail : String, userPassword : String, userPasswordAgain : String){
+        viewModel.createUser(requireActivity(), requireContext(), v, userEmail, userPassword, userPasswordAgain)
     }
 
     fun moveSignIn(v : View){

@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.metehanbolat.graduateproject.R
-import com.metehanbolat.graduateproject.adapter.RecyclerBasketFoodAdapter
+import com.metehanbolat.graduateproject.recycler.adapter.RecyclerBasketFoodAdapter
+import com.metehanbolat.graduateproject.recycler.swipe.SwipeGesture
 import com.metehanbolat.graduateproject.databinding.FragmentFoodBasketBinding
 import com.metehanbolat.graduateproject.models.basketfoodmodel.BasketFoodModel
 import com.metehanbolat.graduateproject.viewmodel.FoodBasketFragmentViewModel
@@ -20,16 +22,16 @@ class FoodBasketFragment : Fragment() {
     private lateinit var viewModel : FoodBasketFragmentViewModel
     private lateinit var adapter : RecyclerBasketFoodAdapter
     private lateinit var finalBasketList : ArrayList<BasketFoodModel>
-    private lateinit var intList: ArrayList<Int>
-    private lateinit var intListTwo: ArrayList<Int>
+
+    private var subtotal : Int = 0
+    private var tax : Float = 0f
+    private var total : Float = 0f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val tempViewModel : FoodBasketFragmentViewModel by viewModels()
         viewModel = tempViewModel
         finalBasketList = ArrayList()
-        intList = ArrayList()
-        intListTwo = ArrayList()
     }
 
     override fun onCreateView(
@@ -38,47 +40,41 @@ class FoodBasketFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_food_basket, container, false)
         binding.foodBasketFragment = this
+        binding.subtotal = subtotal
+        binding.tax = tax
+        binding.total = total
 
-        val callback = object : OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-                viewModel.moveFoodsFragment(binding.root)
-            } }
-        requireActivity().onBackPressedDispatcher.addCallback(callback)
+        viewModel.backPressed(requireActivity(), binding.root)
 
-        viewModel.foodBasketList.observe(viewLifecycleOwner,{ foodBasketList ->
-            for (x in foodBasketList.indices) {
-                var control = 0
-                intList.forEach {
-                    if (foodBasketList[x].food_id == it){
-                        control = 1
-                    }
-                }
-                if (control != 1){
-                    intListTwo.add(foodBasketList[x].food_order)
-                    for (y in x + 1 until foodBasketList.size) {
-                        if (foodBasketList[x].food_id == foodBasketList[y].food_id){
-                            intListTwo.add(foodBasketList[y].food_order)
+        viewModel.foodBasketList.observe(viewLifecycleOwner,{ basketList ->
+            binding.emptyRecycler.visibility = View.INVISIBLE
+            viewModel.specialBasketList(finalBasketList, basketList)
+
+            finalBasketList.forEach { foods ->
+                subtotal += foods.food_price.toInt()
+            }
+            tax = subtotal * 0.08f
+            total = subtotal + tax
+
+            binding.subtotal = subtotal
+            binding.tax = tax
+            binding.total = total
+
+            val swipeGesture = object : SwipeGesture(requireContext()){
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    when(direction){
+                        ItemTouchHelper.LEFT -> {
+                            viewModel.delete(viewHolder.itemView, finalBasketList[viewHolder.adapterPosition].food_id)
                         }
                     }
-                    var sum = 0
-                    intListTwo.forEach { sumIt ->
-                        sum += sumIt
-                    }
-                    val newFood = BasketFoodModel(
-                        food_id = foodBasketList[x].food_id,
-                        food_name = foodBasketList[x].food_name,
-                        food_image = foodBasketList[x].food_image,
-                        food_price = (((foodBasketList[x].food_price.toInt() / foodBasketList[x].food_order) * sum).toString()),
-                        food_order = sum,
-                        user_name = foodBasketList[x].user_name)
-                    finalBasketList.add(newFood)
-                    intListTwo.clear()
                 }
-                intList.add(foodBasketList[x].food_id)
             }
-            //adapter = RecyclerBasketFoodAdapter(requireContext(), foodBasketList, viewModel)
+            val touchHelper = ItemTouchHelper(swipeGesture)
+            touchHelper.attachToRecyclerView(binding.foodBasketRecyclerView)
+
             adapter = RecyclerBasketFoodAdapter(requireContext(), finalBasketList, viewModel)
             binding.basketFoodAdapter = adapter
+
         })
 
         return binding.root
