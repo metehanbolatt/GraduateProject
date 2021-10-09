@@ -48,6 +48,7 @@
     <string name="apply">Uygula</string>
     <string name="my">Benim</string>
     <string name="orders">Siparişlerim</string>
+    <string name="unit_price">Birim Fiyat:</string>
 
     <string name="do_not_match_password">Parolalar uyuşmuyor.</string>
 

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.google.firebase.auth.FirebaseAuth
@@ -15,7 +14,6 @@ import com.metehanbolat.graduateproject.R
 import com.metehanbolat.graduateproject.recycler.adapter.RecyclerFoodAdapter
 import com.metehanbolat.graduateproject.databinding.FragmentFoodsBinding
 import com.metehanbolat.graduateproject.viewmodel.FoodsFragmentViewModel
-import java.util.*
 
 class FoodsFragment : Fragment() {
 

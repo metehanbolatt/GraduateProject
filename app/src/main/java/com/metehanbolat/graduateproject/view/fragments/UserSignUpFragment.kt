@@ -1,7 +1,6 @@
 package com.metehanbolat.graduateproject.view.fragments
 
 import android.os.Bundle
-import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View

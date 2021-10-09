@@ -18,4 +18,5 @@
     <color name="searchHintColor">#BEBEBE</color>
     <color name="signInRed">#FF0036</color>
     <color name="signInDrawableColor">#A8A7A7</color>
+    <color name="basketIncreaseDecreaseBackgroundColor">#FFEFC6</color>
 </resources>

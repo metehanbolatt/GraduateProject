@@ -2,10 +2,7 @@ package com.metehanbolat.graduateproject.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
-import androidx.activity.OnBackPressedCallback
-import androidx.core.content.ContextCompat
 import com.metehanbolat.graduateproject.R
 
 class MainActivity : AppCompatActivity() {

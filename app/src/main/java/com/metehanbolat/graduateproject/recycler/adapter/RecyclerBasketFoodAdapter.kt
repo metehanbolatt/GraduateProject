@@ -27,17 +27,6 @@ class RecyclerBasketFoodAdapter(var context : Context, private var foodBasketLis
 
         val url = "http://kasimadalan.pe.hu/yemekler/resimler/${foodBasket.food_image}"
         Picasso.get().load(url).into(fb.recyclerBasketFoodImage)
-
-
-        //Swipe ile sildiğim için buna gerek duymadım.
-        /*
-        fb.recyclerOrderDeleteImage.setOnClickListener { clickView ->
-            Snackbar.make(clickView, context.resources.getString(R.string.out_of_basket, foodBasket.food_name), Snackbar.LENGTH_INDEFINITE).setAction(context.resources.getString(R.string.remove)){
-                viewModel.delete(clickView, foodBasket.food_id)
-            }.show()
-        }
-         */
-
     }
 
     override fun getItemCount(): Int {

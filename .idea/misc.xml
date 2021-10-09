@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19144144144144143" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/basket.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/basket_decrease_background.xml" value="0.3310810810810811" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/basket_increase_background.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background.xml" value="0.3828125" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/edit_text_background_two.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/ic_add.xml" value="0.3828125" />
@@ -30,7 +32,7 @@
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/drawable/text_view_background.xml" value="0.3310810810810811" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/activity_user.xml" value="0.33" />
-        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_basket_recycler_layout.xml" value="0.33" />
+        <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_basket_recycler_layout.xml" value="0.5" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/food_recycler_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_basket.xml" value="0.33" />
         <entry key="..\:/Users/meteb/AndroidStudioProjects/GraduateProject/app/src/main/res/layout/fragment_food_details.xml" value="0.25" />

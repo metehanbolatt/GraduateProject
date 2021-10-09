@@ -48,6 +48,7 @@
     <string name="apply">Apply</string>
     <string name="my">My</string>
     <string name="orders">Orders</string>
+    <string name="unit_price">Unit Price:</string>
     
     <string name="do_not_match_password">Passwords don\'t match.</string>
 

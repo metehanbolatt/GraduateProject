@@ -24,12 +24,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <LinearLayout
+                    android:id="@+id/amountLinear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/increase"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/basket_increase_background"
+                        android:src="@drawable/arti" />
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textColor="@color/priceColor"
+                        android:fontFamily="@font/gotham_bold"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text='@{foodBasketObject.food_order + ""}' />
+                    <ImageView
+                        android:id="@+id/decrease"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/basket_decrease_background"
+                        android:src="@drawable/eksi" />
+
+                </LinearLayout>
+
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/recyclerBasketFoodImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="10dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/amountLinear"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -55,10 +90,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text='@{@string/total_order + " " + foodBasketObject.food_order}'
                         android:textStyle="bold"
-                        android:textSize="12sp"
-                        android:textColor="@color/purple_700" />
+                        android:textColor="@color/purple_700"
+                        android:text='@{@string/unit_price + " " + @string/money_nation + (Integer.parseInt(foodBasketObject.food_price)/foodBasketObject.food_order)}'
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
